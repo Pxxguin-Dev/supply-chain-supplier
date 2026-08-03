@@ -11,6 +11,7 @@ jobs:
       - name: Checkout PR Code
         uses: actions/checkout@v4
         with:
+          allow-unsafe-pr-checkout: true
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Setup Python
