@@ -1,0 +1,27 @@
+name: Vulnerable PR PR-Checker
+
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+
+jobs:
+  pr-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR Code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run PR Unit Tests
+        run: |
+          pip install -r requirements.txt
+          pytest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PXXGUIN_SONAR_TOKEN: ${{ secrets.PXXGUIN_SONAR_TOKEN }}
