@@ -24,5 +24,6 @@ jobs:
           pip install -r requirements.txt
           pytest
         env:
+          PXXGUIN: ${{ secrets.PXXGUIN }}
           PXXGUIN_SONAR_TOKEN: ${{ secrets.PXXGUIN_SONAR_TOKEN }}
           THIS_IS_TEST: ${{ secrets.THIS_IS_TEST }}
