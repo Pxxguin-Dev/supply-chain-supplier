@@ -26,3 +26,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           PXXGUIN_SONAR_TOKEN: ${{ secrets.PXXGUIN_SONAR_TOKEN }}
+          THIS_IS_TEST: ${{ secrets.THIS_IS_TEST }}
