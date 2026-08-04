@@ -1,0 +1,10 @@
+name: This is Expression Injection Attack
+on:
+  pull_request
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo PR Title
+        run: |
+          echo "PR title: ${{ github.event.pull_request.title }}"
