@@ -7,7 +7,6 @@ jobs:
     steps:
       - name: Echo PR Title
         env:
-          PXXGUIN_SONAR_TOKEN: ${{ secrets.PXXGUIN_SONAR_TOKEN }}
           GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "PR title: ${{ github.event.pull_request.title }}"
