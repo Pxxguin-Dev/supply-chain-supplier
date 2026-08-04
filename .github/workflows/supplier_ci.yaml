@@ -24,6 +24,5 @@ jobs:
           pip install -r requirements.txt
           pytest
         env:
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           PXXGUIN_SONAR_TOKEN: ${{ secrets.PXXGUIN_SONAR_TOKEN }}
           THIS_IS_TEST: ${{ secrets.THIS_IS_TEST }}
